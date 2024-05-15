@@ -1,0 +1,16 @@
+version: "3.11"
+
+services:
+
+  bot:
+    container_name: DemoBot
+    build: .
+    command:
+      - python main.py run
+    restart: always
+    volumes:
+      - demo-bot:/app/db
+
+
+volumes:
+    demo-bot:
